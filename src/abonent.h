@@ -1,5 +1,3 @@
-Author: Mankewich Anhelina, 27.02.2026
-
 #ifndef ABONENT_H
 #define ABONENT_H
 
@@ -15,10 +13,21 @@ implementation can be found in abonent.c*/
 #define MAX_TARIFF_LEN 20
 
 //connection date structure
-struct Date;
+struct Date {
+	int year;
+	int month;
+	int day;
+};
 
 //main structure
-struct ABON1;
+struct ABON1 {
+	char fio[50];
+	char phone[15];
+	struct Date connect_date;
+	char tariff[MAX_TARIFF_LEN];
+	float accrued;
+	float balance;
+};
 
 //function for inputting abonents data through console
 int input_abonents(struct ABON1 abonents[], int max_size);
