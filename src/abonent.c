@@ -1,4 +1,4 @@
-#include "abonent.h"
+#include "../include/abonent.h"
 
 /*implementation of functions and structures from abonent.h, usage: main.c client*/
 

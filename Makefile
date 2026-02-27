@@ -1,19 +1,22 @@
 # lab2 task3 makefile
 
-run: main.o abonent.o
-	gcc -o run main.o abonent.o
+run: obj/main.o obj/abonent.o
+	mkdir -p bin
+	gcc -o bin/run obj/main.o obj/abonent.o
 
-main.o: src/main.c src/abonent.h
-	gcc -c src/main.c -o main.o
+obj/main.o: src/main.c include/abonent.h
+	mkdir -p obj
+	gcc -Iinclude -c src/main.c -o obj/main.o
 
-abonent.o: src/abonent.c src/abonent.h
-	gcc -c src/abonent.c -o abonent.o
+obj/abonent.o: src/abonent.c include/abonent.h
+	mkdir -p obj
+	gcc -Iinclude -c src/abonent.c -o obj/abonent.o
 
 clean:
-	rm -f *.o run
+	rm -rf obj bin
 
 start: run
-	./run
+	./bin/run
 
 rebuild: clean run
 
