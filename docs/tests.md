@@ -1,7 +1,6 @@
 # Test Report: Subscriber Management Program
 
 **Test Date:** February 28, 2026  
-**Program Version:** 1.0  
 **Author:** Mankewich Anhelina  
 **Repository:** tpmp-lab2-task3
 
